@@ -11,14 +11,15 @@
   background-color: #202124;
   color: white;
   height: 30px;
-  font-size: 15px;
+  font-size: 35px;
   border-radius: 8px;
   border: none;
   width: 195px;
   margin: 15px;
   height: 60px;
-
-}
+  text-align: center;
+ 
+}  
 
 
 .ball {
