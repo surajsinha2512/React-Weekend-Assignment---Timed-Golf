@@ -59,11 +59,12 @@ componentDidUpdate(){
   render() {
     return (
  <>
- {this.state.ballRender?null:<button className="start" onClick={this.renderBall}> click here</button>}
- {this.state.ballRender?<div className="ball" style={{left:this.state.x+'px',top:this.state.y+'px'}}></div>:null}
- {this.state.ballRender?<div className="hole" style={{left:250+'px',top:250+'px'}}></div>:null}
- {/*<div className="ballProvider">{this.state.time}</div>*/}
- {this.state.ballRender?<div className="heading-timer" >{this.state.time}</div>:null}
+ {!this.state.ballRender?<button className="start" onClick={this.renderBall}> click here</button>:(<>
+  <div className="ball" style={{left:this.state.x+'px',top:this.state.y+'px'}}></div>
+ <div className="hole"></div>
+ <div className="heading-timer" >{this.state.time}</div>
+ </>)}
+
 </>
     );
   }
